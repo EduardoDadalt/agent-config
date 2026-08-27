@@ -1,5 +1,25 @@
-## GitHub CLI
+## Gerenciamento de dependências
 
-- `gh auth status` pode reportar falha de autenticação incorretamente quando
-  executado dentro do sandbox. Antes de concluir que o token é inválido ou pedir
-  nova autenticação, repita a verificação fora do sandbox com permissão elevada.
+- Antes de adicionar, remover ou atualizar dependências, identifique qual
+  gerenciador de pacotes o projeto já usa, verificando arquivos de lock,
+  manifestos, campos como `packageManager`, configurações de workspace e a
+  documentação do repositório. Continue usando o mesmo gerenciador; não introduza
+  outro sem solicitação explícita.
+- Priorize sempre a CLI oficial do ecossistema para alterar dependências e seus
+  manifestos, por exemplo `flutter pub add`, `dart pub add`, `pnpm add`,
+  `npm install` ou `bun add`, em vez de editar manualmente arquivos como
+  `pubspec.yaml` ou `package.json` quando a operação for suportada pela CLI.
+- Nunca edite arquivos de lock manualmente. Gere ou atualize `pubspec.lock`,
+  `pnpm-lock.yaml`, `package-lock.json`, `bun.lock` e arquivos equivalentes
+  somente por meio do gerenciador de pacotes correspondente.
+
+## Criação de projetos
+
+- Ao iniciar um projeto, priorize o comando oficial de criação ou scaffolding do
+  framework/ecossistema, como `flutter create`, `pnpm create` ou
+  `pnpm dlx create-...`, em vez de criar manualmente a estrutura, os manifestos e
+  os arquivos de configuração quando houver uma CLI apropriada.
+- Para novos projetos JavaScript ou TypeScript, use `pnpm` como gerenciador de
+  pacotes padrão quando o usuário, o template ou o ambiente não especificarem
+  outro. Ao executar um gerador, selecione também `pnpm` nas opções ou flags
+  disponíveis para evitar a criação de lockfiles de outro gerenciador.
