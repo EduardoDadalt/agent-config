@@ -30,3 +30,8 @@
   pacotes padrão quando o usuário, o template ou o ambiente não especificarem
   outro. Ao executar um gerador, selecione também `pnpm` nas opções ou flags
   disponíveis para evitar a criação de lockfiles de outro gerenciador.
+
+## Gerenciamento de skills
+
+- Nunca crie, edite, mova, renomeie ou exclua um arquivo de uma skill sem antes
+  pedir e receber autorização explícita do usuário para a modificação.
