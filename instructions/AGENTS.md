@@ -35,3 +35,10 @@
 
 - Nunca crie, edite, mova, renomeie ou exclua um arquivo de uma skill sem antes
   pedir e receber autorização explícita do usuário para a modificação.
+
+## Revisões de código
+
+- Ao apresentar bugs, defeitos, achados ou comentários de uma revisão de código,
+  numere cada item sequencialmente a partir de 1, para que o usuário possa se
+  referir a eles pelo número. Preserve a mesma numeração ao retomar ou discutir
+  a mesma revisão.
