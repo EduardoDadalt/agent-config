@@ -1,3 +1,10 @@
+## Idioma
+
+- Responda sempre ao usuário em português brasileiro (PT-BR).
+- Preserve no código o idioma, o estilo e as convenções já adotados pelo projeto,
+  inclusive em identificadores, comentários, documentação e mensagens. Não
+  traduza esses elementos apenas para adequá-los ao idioma da resposta.
+
 ## Gerenciamento de dependências
 
 - Antes de adicionar, remover ou atualizar dependências, identifique qual
