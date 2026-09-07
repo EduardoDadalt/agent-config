@@ -4,6 +4,10 @@
 
 This repository is the canonical source for personal Codex and Claude Code configuration. TypeScript utilities live in `src/`: `config.ts` defines paths and link specifications, `setup.ts` installs symbolic links with backups, and `doctor.ts` validates an installation. Global agent instructions are stored in `instructions/`. Each directory under `skills/` is a self-contained skill with a required `SKILL.md`; supporting templates and `agents/openai.yaml` belong beside that skill. Project metadata is in `package.json`, `bun.lock`, and `tsconfig.json`.
 
+## Skill Management
+
+Create new personal skills directly in `skills/<skill-name>/` within this repository, including any supporting resources. Pass this destination explicitly to skill creation tools. The existing `~/.agents/skills` and `~/.claude/skills` symbolic links expose this directory to Codex and Claude Code.
+
 ## Build, Test, and Development Commands
 
 - `bun install` installs the pinned development dependencies.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Avaliação de código"
+  short_description: "Revisão com quatro agentes, incluindo bugs e lógica"
+  default_prompt: "Use $code-quality-review para buscar bugs e erros e avaliar a qualidade do meu código; pergunte o escopo se eu ainda não o tiver informado."
