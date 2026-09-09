@@ -20,6 +20,21 @@
   `pnpm-lock.yaml`, `package-lock.json`, `bun.lock` e arquivos equivalentes
   somente por meio do gerenciador de pacotes correspondente.
 
+## Instalação de ferramentas
+
+- Se a resolução do problema exigir uma ferramenta que não esteja instalada, ou
+  se uma ferramenta adicional puder ajudar, identifique primeiro o sistema
+  operacional da máquina e recomende ao usuário a forma de instalação adequada
+  para que o trabalho possa continuar.
+- Após recomendar a instalação, peça ao usuário que avise quando ela estiver
+  concluída, encerre o turno e aguarde sua resposta. Não continue executando
+  comandos, fazendo alterações ou buscando alternativas enquanto aguarda, mesmo
+  que a ferramenta seja opcional.
+- Retome o trabalho somente quando o usuário confirmar a instalação ou orientar
+  explicitamente outro caminho. Silêncio ou tempo decorrido não autorizam a
+  retomada. Se ele confirmar a instalação, verifique se a ferramenta está
+  disponível antes de usá-la.
+
 ## Criação de projetos
 
 - Ao iniciar um projeto, priorize o comando oficial de criação ou scaffolding do
@@ -35,6 +50,13 @@
 
 - Nunca crie, edite, mova, renomeie ou exclua um arquivo de uma skill sem antes
   pedir e receber autorização explícita do usuário para a modificação.
+
+## Autenticação do GitHub
+
+- Em ambientes com sandbox, não conclua que a credencial do GitHub CLI está
+  inválida com base apenas em `gh auth status` executado dentro do sandbox. Repita
+  a verificação fora do sandbox antes de solicitar uma nova autenticação e execute
+  fora dele as operações do `gh` que dependam dessa credencial.
 
 ## Revisões de código
 

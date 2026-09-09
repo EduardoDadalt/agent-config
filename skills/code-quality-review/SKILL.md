@@ -1,6 +1,6 @@
 ---
 name: code-quality-review
-description: "Find bugs and errors while assessing code quality, simplicity, and maintainability through four independent agents. Use for bug searches or reviews of a PR, uncommitted changes, or the whole repository. Produce an evidence-based report and ask which fixes or improvements the user wants; do not implement them during the assessment."
+description: "Use only when the user explicitly requests code-quality-review by name (for example, $code-quality-review). Find bugs and errors while assessing code quality, simplicity, and maintainability through four independent agents for a PR, uncommitted changes, or the whole repository. Produce an evidence-based report and ask which fixes or improvements the user wants; do not implement them during the assessment."
 ---
 
 # Code Quality Review
