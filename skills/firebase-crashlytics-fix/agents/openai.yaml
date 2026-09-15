@@ -1,0 +1,10 @@
+interface:
+  display_name: "Correções do Crashlytics"
+  short_description: "Corrige problemas do Crashlytics com agentes"
+  default_prompt: "Use $firebase-crashlytics-fix para identificar os projetos Firebase deste repositório, buscar os problemas abertos pelo Firebase MCP e delegar as correções a agentes. Após corrigir todos, pergunte se desejo fechá-los no Crashlytics."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "firebase"
+      description: "Installed Firebase MCP server for project discovery and Crashlytics issue access"
