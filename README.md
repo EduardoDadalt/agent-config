@@ -14,6 +14,8 @@ Claude Code.
 - `instructions/CLAUDE.md`: instruções globais do Claude Code; importa
   `AGENTS.md` para evitar duplicação.
 - `skills/`: cópia canônica das skills pessoais.
+- `claude/statusline-command.sh`: script da statusline do Claude Code,
+  referenciado por `statusLine.command` em `~/.claude/settings.json`.
 - `src/setup.ts`: instala os links, com dry-run e backup automático.
 - `src/doctor.ts`: valida links, instruções e estrutura das skills.
 
@@ -36,10 +38,11 @@ bun run typecheck
 O setup configura:
 
 ```text
-~/.codex/AGENTS.md  → instructions/AGENTS.md
-~/.claude/CLAUDE.md → instructions/CLAUDE.md
-~/.agents/skills    → skills/
-~/.claude/skills    → skills/
+~/.codex/AGENTS.md              → instructions/AGENTS.md
+~/.claude/CLAUDE.md             → instructions/CLAUDE.md
+~/.agents/skills                → skills/
+~/.claude/skills                → skills/
+~/.claude/statusline-command.sh → claude/statusline-command.sh
 ```
 
 Destinos existentes são movidos para um diretório datado em

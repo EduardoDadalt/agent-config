@@ -11,6 +11,7 @@ export const homeDir = homedir();
 export const repoRoot = resolve(import.meta.dir, "..");
 export const instructionsDir = join(repoRoot, "instructions");
 export const skillsDir = join(repoRoot, "skills");
+export const claudeDir = join(repoRoot, "claude");
 
 export const linkSpecs: LinkSpec[] = [
   {
@@ -32,6 +33,11 @@ export const linkSpecs: LinkSpec[] = [
     label: "Skills do Claude Code",
     source: skillsDir,
     target: join(homeDir, ".claude", "skills"),
+  },
+  {
+    label: "Statusline do Claude Code",
+    source: join(claudeDir, "statusline-command.sh"),
+    target: join(homeDir, ".claude", "statusline-command.sh"),
   },
 ];
 
