@@ -8,6 +8,9 @@ import {
   skillsDir,
 } from "./config.ts";
 
+// Diretórios gerenciados pelo Claude Code e ignorados pelo Git; não são skills.
+const ignoredSkillDirectories = new Set(["synced", ".trash"]);
+
 let failures = 0;
 
 function ok(message: string): void {
@@ -71,7 +74,10 @@ try {
 try {
   const entries = await readdir(skillsDir, { withFileTypes: true });
   const skillDirectories = entries
-    .filter((entry) => entry.isDirectory())
+    .filter(
+      (entry) =>
+        entry.isDirectory() && !ignoredSkillDirectories.has(entry.name),
+    )
     .map((entry) => entry.name)
     .sort();
 
